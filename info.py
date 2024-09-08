@@ -13,9 +13,9 @@ def is_enabled(value, default):
 
 # Bot information
 SESSION = environ.get('SESSION', 'Media_search')
-API_ID = int(environ.get('API_ID', ''))
-API_HASH = environ.get('API_HASH', '')
-BOT_TOKEN = environ.get('BOT_TOKEN', "")
+API_ID = int(environ.get('API_ID', '21250782'))
+API_HASH = environ.get('API_HASH', '458eddfa15ca2c67a2c299d925b6a71e')
+BOT_TOKEN = environ.get('BOT_TOKEN', "7217788482:AAEXq5JZfajt-JRni5_4SoOfZJM625LZr4Q")
 
 # Bot settings
 CACHE_TIME = int(environ.get('CACHE_TIME', 300))
@@ -34,29 +34,29 @@ STREAM_API = (environ.get('STREAM_API', '8545865cca91605dd8a85720a15333b978537f3
 STREAMHTO = (environ.get('STREAMHTO', 'https://t.me/BlackHole_Tutorial'))
 
 # Admins, Channels & Users
-ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '').split()]
+ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '7011045471').split()]
 CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '').split()] #Channel id for auto indexing ( make sure bot is admin )
-auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '').split()]
+auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '7011045471').split()]
 AUTH_USERS = (auth_users + ADMINS) if auth_users else []
-PREMIUM_USER = [int(user) if id_pattern.search(user) else user for user in environ.get('PREMIUM_USER', '').split()]
-auth_channel = environ.get('AUTH_CHANNEL', '') #Channel / Group Id for force sub ( make sure bot is admin )
+PREMIUM_USER = [int(user) if id_pattern.search(user) else user for user in environ.get('PREMIUM_USER', '7011045471').split()]
+auth_channel = environ.get('AUTH_CHANNEL', '-1002425129204') #Channel / Group Id for force sub ( make sure bot is admin )
 auth_grp = environ.get('AUTH_GROUP')
 AUTH_CHANNEL = int(auth_channel) if auth_channel and id_pattern.search(auth_channel) else None
 AUTH_GROUPS = [int(ch) for ch in auth_grp.split()] if auth_grp else None
-support_chat_id = environ.get('SUPPORT_CHAT_ID', '') # support group id ( make sure bot is admin )
-reqst_channel = environ.get('REQST_CHANNEL_ID', '') # request channel id ( make sure bot is admin )
+support_chat_id = environ.get('SUPPORT_CHAT_ID', '-1002279517369') # support group id ( make sure bot is admin )
+reqst_channel = environ.get('REQST_CHANNEL_ID', '-1002425129204') # request channel id ( make sure bot is admin )
 REQST_CHANNEL = int(reqst_channel) if reqst_channel and id_pattern.search(reqst_channel) else None
 SUPPORT_CHAT_ID = int(support_chat_id) if support_chat_id and id_pattern.search(support_chat_id) else None
 NO_RESULTS_MSG = bool(environ.get("NO_RESULTS_MSG", False)) # True if you want no results messages in Log Channel
 
 # MongoDB information
-DATABASE_URI = environ.get('DATABASE_URI', "")
-DATABASE_NAME = environ.get('DATABASE_NAME', "")
+DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://Radha:Radha@cluster0.6gat6fo.mongodb.net/?retryWrites=true&w=majority")
+DATABASE_NAME = environ.get('DATABASE_NAME', "cluster0")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
 
 # Verify
-VERIFY = bool(environ.get('VERIFY', False)) # Verification On ( True ) / Off ( False )
-HOWTOVERIFY = environ.get('HOWTOVERIFY', url='https://t.me/') # How to open tutorial link for verification
+VERIFY = bool(environ.get('VERIFY', True)) # Verification On ( True ) / Off ( False )
+HOWTOVERIFY = environ.get('HOWTOVERIFY', url='https://t.me/blackhole_tutorial') # How to open tutorial link for verification
 
 # Others
 SHORTLINK_URL = environ.get('SHORTLINK_URL', 'instantearn.in')
